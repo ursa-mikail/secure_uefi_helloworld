@@ -21,7 +21,7 @@ make verify   # Verify signatures
 2. make sign   → Signs .efi with RSA key
 3. make verify → Verifies signature
 
-""" on the Makefile
+``` on the Makefile
 # Replace leading spaces with tabs (most common fix)
 sed -i.bak 's/^    /\t/g' Makefile
 
@@ -50,9 +50,9 @@ sed -i '' 's/LDFLAGS = .*/LDFLAGS = -nostdlib -static -T gcc_efi.lds/' Makefile
 
 # Check if it worked
 make --dry-run
-"""
+```
 
-"""
+```
 % ssh_login_with_key
 
 cd secure_uefi_helloworld
@@ -68,7 +68,7 @@ make clean
 make all
 make sign
 make verify
-"""
+```
 
 ```
 % ssh_login_with_key
@@ -115,7 +115,7 @@ Verifying signature
 ```
 
 
-"""
+```
 # Run any command - logs are automatically saved
 ssh_run_uefi "secure_uefi_helloworld" "make all"
 # Output shown on screen AND saved to: logs/secure_uefi_helloworld_build_TIMESTAMP.log
@@ -129,4 +129,5 @@ ssh_run_uefi_qemu "secure_uefi_helloworld"
 # View your logs
 ls -lh logs/
 cat logs/secure_uefi_helloworld_build_*.log
-"""
+```
+
