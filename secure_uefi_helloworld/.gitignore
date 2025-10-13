@@ -1,0 +1,12 @@
+*.o
+*.so
+*.efi
+*.sig
+obj/
+disk.img
+startup.nsh
+keys/private_key.pem
+logs/*.log
+remote_logs/
+*.swp
+.DS_Store
