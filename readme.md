@@ -9,6 +9,18 @@ make sign     # Sign with RSA keys
 make verify   # Verify signatures
 ```
 
+```
+
+make all && make sign && make verify
+
+ssh_uefi_pipeline "secure_uefi_helloworld" false
+
+ssh_uefi_pipeline "secure_uefi_helloworld" true
+
+ssh_download_uefi "secure_uefi_helloworld"
+```
+
+
 ## Files
 - Makefile           - Build configuration
 - gcc_efi.lds        - Linker script
